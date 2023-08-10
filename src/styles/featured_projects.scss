@@ -1,0 +1,134 @@
+@use 'variables' as v;
+
+@keyframes moving_arrow {
+    0% { 
+        left: 0px;
+    }
+    50% {
+        left: 5px;
+    }
+    100% {
+        left: 0px;
+    }
+
+}
+
+#featured-projects-header-flex-container-div {
+    display: flex;
+    justify-content: center;
+}
+#featured-container {
+    height: 520px;
+    @media (min-width: v.$desktop) {
+        height: 500px;
+    }
+    width: 100%;
+    background: #033f60;
+}
+
+#featured-projects-title {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#featured-projects-view-more {
+    display: flex;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#information-container-projects-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#img-container {
+    height: 350px;
+    margin-bottom: 10px;
+    width: 100%; 
+    background: black; 
+    img {
+        height: 350px;
+        width: 100%;
+        position: relative;
+        transform: rotate(0);
+    }
+}
+
+#information-container-projects {
+    width: 92%;
+}
+
+#featured-projects-header-flex {
+    display: flex;
+    justify-content: start;
+    width: 1440px;
+    #featured-projects-title {
+       width: 300px;
+       font-weight: 900;
+       padding-left: 7.5%;
+       @media (min-width: v.$desktop) {
+        padding-left: 10px;
+    }
+    }
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media (min-width: v.$desktop) {
+        justify-content: space-around;
+        gap: 38%;
+    }
+    @media (min-width: 1442px) {
+        justify-content: space-around;
+        gap: 410px;
+    }
+}
+
+#view-container {
+    display: none;
+    font-weight: 900;
+    @media (min-width: v.$desktop) {
+        display: block;
+    }
+    span {
+        svg {
+            position: relative;
+            animation: moving_arrow 3s infinite;
+        }
+    }
+}
+#view-container-mobile {
+    font-weight: 900;
+    display: block;
+    @media (min-width: v.$desktop) {
+        display: none;
+    }
+    #featured-projects-view-more {
+        justify-content: end;
+        padding-top: 15px;
+        padding-right: 6%;
+    }
+    span {
+        svg {
+            position: relative;
+            animation: moving_arrow 3s infinite;
+        }
+    }
+}
+
+.slide-number {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+#title-container-featured {
+    font-weight: bold;
+}
+
+#location-cotainer {
+    font-weight: 500;
+}
+
+.splide {
+    width: 1200px;
+    cursor: grab;
+}

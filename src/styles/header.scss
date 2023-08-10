@@ -1,0 +1,247 @@
+@use 'variables' as v;
+
+@keyframes menuOpen {
+    from {
+        height: 100px;
+        background-color: '';
+    }
+    to {
+        height: 400px;
+        background-color: #033f60;
+    }
+}
+
+@keyframes menuClose {
+    from {
+        height: 400px;
+        background-color: #033f60;
+    }
+    to {
+        height: 100px;
+        background-color: '';    }
+}
+
+@keyframes menuShow {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+
+    }
+}
+
+@keyframes menuHide {
+    0% {
+        opacity: 100%;
+    }
+
+    20% {
+        opacity: 0%;
+    }
+
+    100% {
+
+    }
+}
+
+@keyframes lineAnimationStart {
+    0% {
+        width:0;
+    }
+    100% {
+        width:100%;
+    }
+}
+@keyframes lineAnimationEnd {
+    0% {
+        width:100%;
+    }
+    100% {
+        width:0;
+    }
+}
+
+header {
+    position: relative;
+    z-index: 99;
+}
+
+#line-container {
+    display: none;
+    // LINE DISAPEARS WIDTH < MOBILE
+    @media (min-width: v.$desktop) {
+        background: white;
+        height: 1px;
+        width: 100%;
+        display: block;
+    }
+}
+
+#mobile-nav {
+    display: none;
+    #cascadia-mobile {
+        min-width: fit-content;
+        display: inline-block;
+        transform: translateY(-80px);
+        img {
+            display: inline;
+            position: relative;
+            top: 35px;
+            left: -8px;
+        }
+    }
+    img {
+        display: none;
+    }
+    #mobile-nav-menu {
+        display: none;
+    }
+    #menu-button-container {
+        display: none;
+    }
+    @media (max-width: calc(v.$desktop - 1px)) {
+        margin-left: 2%;
+        margin-right: 2%;
+        display:block;
+        position: fixed;
+        height: 60px;
+        width: 96%;
+        background-color: v.$company-color;
+        border-radius: 50px;
+        bottom: 2%;
+        z-index: 101;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+}
+
+#top-nav {
+    display: none;
+    // TOP-NAV DISAPEARS WIDTH < desktop
+    // only tablet
+    @media (min-width:v.$desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 99;
+    position: relative;
+    #email-us-container {
+        min-width: fit-content;
+        margin-left: 20px;
+        font-weight: 600;
+    }
+    #follow-us-container {
+        display: none;
+        min-width: fit-content;
+        @media (min-width: v.$desktop) {
+            font-weight: 600;
+            display: block;
+        }
+    }
+    #instagram-logo-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        #instagram-logo-a {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #spacer {
+        width: 400px;
+    }
+    
+    #spacer2 { 
+        width: 10px;
+        min-width: 10px;
+    }
+}
+}
+
+#main-nav {
+    display: none;
+    @media (min-width:v.$desktop) {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    #cascadia {
+        min-width: fit-content;
+        display: inline-block;
+        transform: translateY(-80px);
+        img {
+            display: inline;
+            position: relative;
+            left: 5px;
+        }
+    }
+    #nav-menu {
+        display: flex;
+        gap: 67px;
+        font-weight: bold;
+        margin-right: 48px;
+        li {
+            font-weight: 900;
+            margin-top: 40px;
+            height: fit-content;
+        }
+        li:last-child {
+            margin-top: 30px;
+        }
+        li:last-child p {
+            padding: 10px;
+            border-radius: 10px;
+            border-style: solid;
+            border-width: 1.5px;
+            border-color: white;
+        }
+        li:last-child:hover {
+            cursor: pointer;
+            border-radius: 10px;
+            animation: contact-hover 0.3s linear forwards;
+        }
+    }
+    li div {
+        height: 2px;
+        background-color: #ffffff;
+        width: 0px;
+    }
+}
+}
+
+@keyframes contact-hover {
+    from {
+        border-radius: 10px;
+    }
+    to {
+        border-radius: 10px;
+        border-color: v.$company-color;
+        background-color: v.$company-color;
+    }
+}
+
+@keyframes contact-hover-reverse {
+    from {
+        border-color: v.$company-color;
+        background-color: v.$company-color;
+    }
+    to {
+    }
+}
+
+#spacer3 {
+    width: 170px;
+}
+@media (max-width: 1057px) {
+    #spacer3 {
+        width: 13%;
+    }
+}

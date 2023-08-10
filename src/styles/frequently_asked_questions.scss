@@ -1,0 +1,68 @@
+
+@use 'variables' as v;
+
+.divider {
+    height: 2px;
+    background: v.$company-color;
+    opacity: 50%;
+}
+
+.arrow-grid-container {
+    display: grid;
+    place-content: center;
+}
+
+#FAQ-container-main-grid {
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 98% 2%;
+    p {
+        padding-bottom: 15px;
+    }
+    p:not(:first-child){
+        padding-top: 15px;
+        color: v.$company-color;
+        font-weight: 600;
+        opacity: 100%;
+        font-size: 3.5vw;
+        @media (min-width: v.$mobile) {
+            color: v.$company-color;
+            font-weight: 600;
+            opacity: 100%;
+            font-size: 18px;
+        }
+    }
+}
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    height: fit-content;
+    position: relative;
+    #FAQ-container-main {
+        padding-left: 20px;
+        padding-top: 40px;
+        padding-bottom: 45px;
+        padding-right: 20px;
+        @media (min-width: v.$mobile) {
+            width: 1150px;
+            position: relative;
+        }
+    #FAQ-title {
+        font-size: 4.5vw;
+        color: v.$company-color;
+        font-weight: 900; 
+        text-align: center;
+        @media (min-width: v.$mobile) {
+            font-size: 25px;
+            color: v.$company-color;
+            font-weight: 900; 
+            text-align: center;
+        }
+        @media (min-width: 1024px) {
+            text-align: start;
+        }
+    }
+}
+}

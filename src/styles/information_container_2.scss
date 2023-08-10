@@ -1,0 +1,77 @@
+@use 'variables' as v;
+
+.bold {
+    font-weight: 800;
+}
+
+.text {
+    font-weight: 600;
+}
+
+#information-container-element {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+#information-container-2-box {
+    background-color: white;
+    width: 1440px;
+}
+#information-container-2 {
+    height: 625px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    ul li {
+        list-style-type: disc;
+        list-style-position: outside;
+    }
+    .box {
+        background-color: v.$company-color;
+        height: 200px;
+        width: 100%;
+        font-size: 4.1vw;
+        padding: 40px;
+        @media (min-width: calc(v.$mobile - 50px)) {
+            width: 400px;
+            font-size: 20px;
+            padding: 40px;
+        }
+        .bold {
+            @media (min-width: calc(v.$mobile - 50px)) {
+                padding-bottom: 30px;
+                font-size: 22.5px; 
+            }
+            padding-bottom: 30px;
+            font-size: 4.5vw;
+        }
+    }
+    #box-1-flex {
+        width: 93%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: v.$desktop) {
+            padding-right: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+    }
+    #box-2-flex {
+        width: 92%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: v.$desktop) {
+            padding-left: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    } 
+}
