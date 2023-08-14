@@ -12,10 +12,13 @@
     place-content: center;
 }
 
+.FAQcontainer {
+    display: grid;
+    grid-template-columns: 98% 2%;
+}
+
 #FAQ-container-main-grid {
-    .faq-grid {
-        display: grid;
-        grid-template-columns: 98% 2%;
+    .faq-grid-container {
     p {
         color: v.$company-color;
         padding-top: 15px;
