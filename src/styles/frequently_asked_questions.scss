@@ -4,7 +4,30 @@
 .divider {
     height: 2px;
     background: v.$company-color;
-    opacity: 50%;
+}
+
+@keyframes open {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes close {
+    0% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .arrow-grid-container {
@@ -14,11 +37,20 @@
 
 .FAQcontainer {
     display: grid;
-    grid-template-columns: 98% 2%;
+    grid-template-columns: 96% 4%;
 }
 
 #FAQ-container-main-grid {
     .faq-grid-container {
+        #FAQcontainer {
+            svg {
+                display: block;
+                position: relative;
+            }
+        }
+        overflow: hidden;
+        height: fit-content;
+        position: relative;
     p {
         color: v.$company-color;
         padding-top: 15px;
