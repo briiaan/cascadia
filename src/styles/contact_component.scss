@@ -4,18 +4,25 @@
     height: 200px;
     width: 100%;
     background-color: v.$company-color;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
     #contact-container-div{
         width: 1440px;
     }
     #contact-container-flex {
+        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
         height: 200px;
         #text-box {
             width: 60%;
             font-weight: 800;
             font-size: 3.5vw;
+            display: -ms-grid;
             display: grid;
             place-content: center;
             text-align: center;
@@ -30,6 +37,7 @@
             width: 40%;
             font-weight: 900;
             font-size: 3.5vw;
+            display: -ms-grid;
             display: grid;
             place-content: center;
             text-align: center;
@@ -55,7 +63,8 @@
                 width: 100%;
                 position: absolute;
                 z-index: 48;
-                object-fit: cover;
+                -o-object-fit: cover;
+                   object-fit: cover;
             }
         }
     }

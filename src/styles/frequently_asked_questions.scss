@@ -6,37 +6,76 @@
     background: v.$company-color;
 }
 
-@keyframes open {
+@-webkit-keyframes open {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
     50% {
-        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
     }
     100% {
-        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+}
+
+@keyframes open {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    100% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes close {
+    0% {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+    }
+    50% {
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 }
 
 @keyframes close {
     0% {
-        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
     }
     50% {
-        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
     }
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 }
 
 .arrow-grid-container {
+    display: -ms-grid;
     display: grid;
     place-content: center;
 }
 
 .FAQcontainer {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 96% 4%;
     grid-template-columns: 96% 4%;
 }
 
@@ -49,6 +88,8 @@
             }
         }
         overflow: hidden;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         position: relative;
     p {
@@ -72,9 +113,15 @@
 }
     width: 100%;
     background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
     vertical-align: middle;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: relative;
     #FAQ-container-main {

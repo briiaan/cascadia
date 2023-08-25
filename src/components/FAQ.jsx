@@ -45,6 +45,7 @@ export default function FAQ() {
         function openAnimate() {
             if(!isOpen[index]) {
                 if (height >= maxheight) {
+                    svgRefs[index].current.style.rotate = 180 + 'deg';
                     clearInterval(id)
                     setIsOpen({...isOpen, [index]: true, last: index})
                     element.lastChild.style.position = 'relative';

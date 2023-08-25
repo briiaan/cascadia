@@ -1,7 +1,11 @@
 @use 'variables' as v;
 
 // for debugging
-
+/*
+* {
+    outline: 1px solid red;
+}
+*/
 html { 
     scroll-behavior: smooth;
     background-color: black;
@@ -26,7 +30,8 @@ body {
 
 img {
     overflow: hidden;
-    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
 }
 
 #page-container {
@@ -57,7 +62,6 @@ p {
 .noselect {
     -webkit-touch-callout: none;
       -webkit-user-select: none;
-       -khtml-user-select: none;
          -moz-user-select: none;
           -ms-user-select: none;
               user-select: none;
@@ -68,13 +72,13 @@ p {
 }
 
 .grab {
+    cursor: -webkit-grab;
     cursor: grab;
 }
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
+      -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
          -moz-user-select: none; /* Old versions of Firefox */
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently

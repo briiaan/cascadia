@@ -2,14 +2,23 @@
 
 #main-page-container {
     display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     #introduction-container {
+        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+                align-items: center;
         height: 100vh;
         min-height: -webkit-fill-available;
         @media (min-width: v.$desktop) {
+            height: -webkit-calc(100vh - 101px);
             height: calc(100vh - 101px);
             min-height: 0;
         }
@@ -18,7 +27,8 @@
             width: 100%;
             position: absolute;
             top: 0px;
-            object-fit: cover;
+            -o-object-fit: cover;
+               object-fit: cover;
             min-height: -webkit-fill-available;
         }
     }   
@@ -54,6 +64,8 @@
         }
     }
     @media (min-width: v.$desktop) {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         width: 1000px;
         h1 {

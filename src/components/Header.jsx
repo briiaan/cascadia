@@ -1,9 +1,10 @@
 import "../styles/default.scss";
+import "../styles/header.scss" 
 import logo from "../images/cascadia.png";
 import {useState, useRef, useEffect} from "react";
 import { useAnimate } from "framer-motion";
 
-export default function Header({_email}) {
+export default function Header({_email, isHomepage}) {
     const [scope, animate] = useAnimate();
     const [scope1, animate1] = useAnimate();
     const [scope2, animate2] = useAnimate();
@@ -73,7 +74,7 @@ export default function Header({_email}) {
     return(
       <>
         <header>
-            <div id='main-nav' ref={main_nav}>
+            <div id='main-nav' ref={main_nav} className={isHomepage ? 'transparent' : 'company_color'}>
                 <a 
                 id='cascadia' 
                 href='/'>
@@ -87,8 +88,8 @@ export default function Header({_email}) {
                 </a>
                 <div id='spacer3' ref={spacer}></div>
                 <ul id='nav-menu'>
-                    <li ref={scope}><p><a ref={about} href='/about-us.html' className="hover">Who We Are</a></p><div className='line-animation'></div></li>
-                    <li ref={scope1}><p><a ref={services} href='/services.html' className="hover">Services</a></p><div className='line-animation'></div></li>
+                    <li ref={scope}><p><a ref={about} href='/about-us' className="hover">Who We Are</a></p><div className='line-animation'></div></li>
+                    <li ref={scope1}><p><a ref={services} href='/services' className="hover">Services</a></p><div className='line-animation'></div></li>
                     <li ref={scope2}><p><a ref={projects} href='/projects.html' className="hover">Projects</a></p><div className='line-animation'></div></li>
                     <li><p className="hover noselect" ref={contact}>Contact Us</p></li>
                 </ul>

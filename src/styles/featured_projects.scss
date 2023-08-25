@@ -1,5 +1,18 @@
 @use 'variables' as v;
 
+@-webkit-keyframes moving_arrow {
+    0% { 
+        left: 0px;
+    }
+    50% {
+        left: 5px;
+    }
+    100% {
+        left: 0px;
+    }
+
+}
+
 @keyframes moving_arrow {
     0% { 
         left: 0px;
@@ -14,8 +27,12 @@
 }
 
 #featured-projects-header-flex-container-div {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
 }
 #featured-container {
     height: 520px;
@@ -32,14 +49,20 @@
 }
 
 #featured-projects-view-more {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     font-size: 20px;
     font-weight: bolder;
 }
 
 #information-container-projects-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
 }
 
 #img-container {
@@ -51,7 +74,8 @@
         height: 350px;
         width: 100%;
         position: relative;
-        transform: rotate(0);
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
     }
 }
 
@@ -60,8 +84,12 @@
 }
 
 #featured-projects-header-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
-    justify-content: start;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+            justify-content: start;
     width: 1440px;
     #featured-projects-title {
        width: 300px;
@@ -74,11 +102,13 @@
     padding-top: 20px;
     padding-bottom: 20px;
     @media (min-width: v.$desktop) {
-        justify-content: space-around;
+        -webkit-justify-content: space-around;
+                justify-content: space-around;
         gap: 38%;
     }
     @media (min-width: 1442px) {
-        justify-content: space-around;
+        -webkit-justify-content: space-around;
+                justify-content: space-around;
         gap: 410px;
     }
 }
@@ -92,7 +122,8 @@
     span {
         svg {
             position: relative;
-            animation: moving_arrow 3s infinite;
+            -webkit-animation: moving_arrow 3s infinite;
+                    animation: moving_arrow 3s infinite;
         }
     }
 }
@@ -103,14 +134,17 @@
         display: none;
     }
     #featured-projects-view-more {
-        justify-content: end;
+        -webkit-box-pack: end;
+        -webkit-justify-content: end;
+                justify-content: end;
         padding-top: 15px;
         padding-right: 6%;
     }
     span {
         svg {
             position: relative;
-            animation: moving_arrow 3s infinite;
+            -webkit-animation: moving_arrow 3s infinite;
+                    animation: moving_arrow 3s infinite;
         }
     }
 }
@@ -130,5 +164,6 @@
 
 .splide {
     width: 1200px;
+    cursor: -webkit-grab;
     cursor: grab;
 }
