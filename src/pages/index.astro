@@ -3,6 +3,7 @@ const email="inquiry@cascadiacustomframing.com"
 import Header from '../components/Header.jsx';
 import { Image } from '@astrojs/image/components';
 import background from '../images/cascadia-roof.jpg?url';
+import background2 from '../images/cascadia-cover-1231DSKA.jpg?url'
 import stairs from '../images/staircase.jpg?url'
 import InformationContainer from '../components/InformationContainer.jsx';
 import InformationContainer2 from '../components/InformationContainer2';
@@ -26,7 +27,7 @@ import Footer from '../components/Footer';
 		<meta property="og:url" content="https://cascadiacustomframing.com/"/>
 		<meta property="site_name" content="Cascadia Custom Framing"/>
 		<link rel="icon" type="image/svg+xml" href="../../public/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 		<meta name="theme-color" content="#033f60"/>
 		<meta name="generator" content={Astro.generator} />
 		<script type="application/ld+json">
@@ -75,7 +76,7 @@ import Footer from '../components/Footer';
 		<Header _email={email} isHomepage={true} client:load/>
 		<span id='main-page-container'>
 			<div id="introduction-container">
-				<img src={background} alt="Image is showing roof"/>
+			  <img id='background-image' src={background} alt="Image is showing roof" onload="img_changer()"/>
 		<div id='first-container-text'>
 		<h1>WITH OVER A DECADE OF EXPERIENCE IN FRAMING</h1>
 		<h2>WE BUILD ALL OVER THE PACIFIC NORTHWEST</h2>

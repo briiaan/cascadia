@@ -11,9 +11,9 @@ export default function Footer() {
                             <p><b>Pages</b></p>
                             <div id='sites'>
                                 <a href='/'>Home</a>
-                                <a>Projects</a>                          
+                                <a href='/projects'>Projects</a>                          
                                 <a href='/about-us'>Who We Are</a>
-                                <a>Privacy Policy</a>
+                                <a href='/privacy-policy'>Privacy Policy</a>
                                 <a href='/services'>What We Do</a>
                                 <a>Sitemap</a>
                             </div>

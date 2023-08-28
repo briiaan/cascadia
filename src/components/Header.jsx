@@ -20,7 +20,7 @@ export default function Header({_email, isHomepage}) {
     const spacer = useRef(null);
     const mobile_items = useRef(null);
     const [isOpen, setOpen] = useState(false);
-
+    const svg = useRef(null);
     /*
     WHEN HEADER ELEMENT IS HOVERED IT SETS HOVERING TO TRUE.
     */
@@ -42,6 +42,9 @@ export default function Header({_email, isHomepage}) {
         })
         contact.current.addEventListener("mouseover", () => {
           contact.current.style.animation = 'contact-hover 0.65s forwards'
+        })
+        svg.current.addEventListener("mousedown", () => {
+         
         })
     }) 
 
@@ -90,7 +93,7 @@ export default function Header({_email, isHomepage}) {
                 <ul id='nav-menu'>
                     <li ref={scope}><p><a ref={about} href='/about-us' className="hover">Who We Are</a></p><div className='line-animation'></div></li>
                     <li ref={scope1}><p><a ref={services} href='/services' className="hover">Services</a></p><div className='line-animation'></div></li>
-                    <li ref={scope2}><p><a ref={projects} href='/projects.html' className="hover">Projects</a></p><div className='line-animation'></div></li>
+                    <li ref={scope2}><p><a ref={projects} href='/projects' className="hover">Projects</a></p><div className='line-animation'></div></li>
                     <li><p className="hover noselect" ref={contact}>Contact Us</p></li>
                 </ul>
             </div>
@@ -105,9 +108,11 @@ export default function Header({_email, isHomepage}) {
                     style={{display: "inline", position: 'relative', top: '-45px', left: '-8px'}}
                     />
                 </a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+                <div id='svg-icon-container' ref={svg}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
 </svg>
+</div>
                 <ul id='mobile-nav-menu' ref={mobile_items}>
                 <li><p><a href='/about-us.html' className="hover">About Us</a></p></li>
                     <li><p><a href='/services.html' className="hover">Services</a></p></li>

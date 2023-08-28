@@ -1,5 +1,11 @@
 @use 'variables' as v;
 
+#svg-icon-container {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+}
+
 .company_color  {
     background: v.$company-color;
 }

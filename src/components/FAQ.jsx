@@ -83,10 +83,6 @@ export default function FAQ() {
             }
         }
     }
-
-    useEffect(() => {
-        console.log(isOpen)
-    }, [isOpen])
     
     return (
        <>
